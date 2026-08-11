@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --diu-green: #1a5f3f;
+  --diu-gold: #d4af37;
+}
+
+body {
+  @apply bg-gray-50;
+}
+
+.container {
+  @apply max-w-7xl;
+}
