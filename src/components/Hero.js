@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            IEEE CIDSBA 2024
+            IEEE CIDSBA 2027
           </h1>
           <p className="text-xl md:text-2xl mb-4 text-gray-100">
             International Conference on Computational Intelligence,

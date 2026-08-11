@@ -112,7 +112,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8 text-diu-green">
-              About CIDSBA 2024
+              About CIDSBA 2027
             </h2>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               The IEEE International Conference on Computational Intelligence, Data Science and Business 

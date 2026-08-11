@@ -23,7 +23,7 @@ export default function FAQ() {
             Frequently Asked Questions
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Find answers to common questions about CIDSBA 2024
+            Find answers to common questions about CIDSBA 2027
           </p>
         </div>
 

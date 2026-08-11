@@ -58,7 +58,7 @@ export default function Registration() {
           Registration
         </h1>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Choose your registration category and join us at CIDSBA 2024
+          Choose your registration category and join us at CIDSBA 2027
         </p>
 
         {/* Registration Categories */}
@@ -108,7 +108,7 @@ export default function Registration() {
               Register Now
             </h2>
             <p className="mb-6 text-gray-100">
-              Secure your spot at CIDSBA 2024
+              Secure your spot at CIDSBA 2027
             </p>
             <button className="bg-diu-gold hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-lg transition-colors">
               Complete Registration

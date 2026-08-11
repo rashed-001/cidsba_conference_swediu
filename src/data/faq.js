@@ -3,8 +3,8 @@ export const faqs = [
     category: "General",
     questions: [
       {
-        question: "What is CIDSBA 2024?",
-        answer: "CIDSBA 2024 is the IEEE International Conference on Computational Intelligence, Data Science and Business Applications, organized by the Department of Software Engineering at Daffodil International University, Bangladesh."
+        question: "What is CIDSBA 2027?",
+        answer: "CIDSBA 2027 is the IEEE International Conference on Computational Intelligence, Data Science and Business Applications, organized by the Department of Software Engineering at Daffodil International University, Bangladesh."
       },
       {
         question: "When and where will the conference be held?",

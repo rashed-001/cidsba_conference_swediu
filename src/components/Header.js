@@ -56,7 +56,7 @@ export default function Header() {
                 IEEE
               </div>
               <div>
-                <span className="text-xl font-bold text-diu-green block">CIDSBA 2024</span>
+                <span className="text-xl font-bold text-diu-green block">CIDSBA 2027</span>
                 <span className="text-xs text-gray-600">Daffodil International University</span>
               </div>
             </Link>

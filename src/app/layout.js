@@ -6,7 +6,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'IEEE CIDSBA 2024 - Daffodil International University',
+  title: 'IEEE CIDSBA 2027 - Daffodil International University',
   description: 'IEEE International Conference on Computational Intelligence, Data Science and Business Applications',
 };
 
