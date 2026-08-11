@@ -11,6 +11,7 @@ export default function Schedule() {
         </h1>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
           Detailed program schedule for CIDSBA 2027
+        </p>
 
         {/* Conference Info */}
         <div className="max-w-4xl mx-auto mb-12 grid grid-cols-1 md:grid-cols-2 gap-6">
