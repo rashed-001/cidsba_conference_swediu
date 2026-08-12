@@ -1,33 +1,95 @@
-# Dependencies
+# ==========================================
+# Dependencies & Package Managers
+# ==========================================
 /node_modules
 /.pnp
 .pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnpm-store
 
-# Testing
-/coverage
-
-# Next.js
+# ==========================================
+# Next.js & Build Outputs
+# ==========================================
 /.next/
 /out/
-
-# Production
 /build
+/dist
+*.tsbuildinfo
+next-env.d.ts
 
-# Misc
-.DS_Store
-*.pem
-
-# Debug
+# ==========================================
+# Logs & Debugging
+# ==========================================
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
-# Local env files
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+.env
 .env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
 
-# Vercel
+# ==========================================
+# Testing & Code Coverage
+# ==========================================
+/coverage
+/.nyc_output
+.playwright/
+/test-results
+
+# ==========================================
+# IDEs, Editors & Tooling
+# ==========================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.gemini/
+.agents/
+
+# ==========================================
+# OS & System Artifacts
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ==========================================
+# Deployment & Hosting Platforms
+# ==========================================
 .vercel
+.serverless/
 
-# Typescript
-*.tsbuildinfo
-next-env.d.ts
+# ==========================================
+# Temporary & Backup Files
+# ==========================================
+*.bak
+*.tmp
+*.temp

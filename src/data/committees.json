@@ -1,0 +1,345 @@
+{
+  "patronData": {
+    "chiefPatron": {
+      "name": "Md. Sabur Khan",
+      "designation": "Chairman, Board of Trustees",
+      "institution": "Daffodil International University, Bangladesh"
+    },
+    "patrons": [
+      {
+        "name": "Prof. Dr. M. R. Kabir",
+        "designation": "Vice Chancellor",
+        "institution": "Daffodil International University, Bangladesh"
+      },
+      {
+        "name": "Prof. Dr. Mohammad Masum Iqbal",
+        "designation": "Pro Vice Chancellor",
+        "institution": "Daffodil International University, Bangladesh"
+      }
+    ]
+  },
+  "internationalAdvisoryCommittee": [
+    {
+      "name": "Dr. Christophe SIMON",
+      "designation": "Professor / Researcher",
+      "institution": "CRAN, University of Lorraine",
+      "country": "France"
+    },
+    {
+      "name": "Dr. Aisha Umair",
+      "designation": "Researcher",
+      "institution": "MMMI, University of Southern Denmark",
+      "country": "Denmark"
+    },
+    {
+      "name": "Dr. Jungpil Shin",
+      "designation": "Professor",
+      "institution": "University of Aizu",
+      "country": "Japan"
+    },
+    {
+      "name": "Dr. Mouhaydine Tlemçani",
+      "designation": "Professor",
+      "institution": "University of Evora",
+      "country": "Portugal"
+    },
+    {
+      "name": "Prof. Dr. Wenyu Chen",
+      "designation": "Professor",
+      "institution": "University of Electronic Science and Technology of China",
+      "country": "China"
+    },
+    {
+      "name": "Dr. Michael Goh (Kah Ong Michael Goh)",
+      "designation": "Associate Professor",
+      "institution": "Multimedia University (MMU)",
+      "country": "Malaysia"
+    },
+    {
+      "name": "Dr. Watshara Shoombuatong",
+      "designation": "Associate Professor",
+      "institution": "Mahidol University",
+      "country": "Thailand"
+    },
+    {
+      "name": "Dr. Muhammad Usama Islam",
+      "designation": "Faculty / Researcher",
+      "institution": "Metropolitan State University",
+      "country": "USA"
+    },
+    {
+      "name": "Dr. Syed Mohammed Shamsul Islam",
+      "designation": "Associate Professor",
+      "institution": "Edith Cowan University",
+      "country": "Australia"
+    },
+    {
+      "name": "Dr. Miguel Enrique Campusano Araya",
+      "designation": "Researcher",
+      "institution": "MMMI, University of Southern Denmark",
+      "country": "Denmark"
+    }
+  ],
+  "nationalAdvisoryCommittee": [
+    {
+      "name": "Dr. Dewan Md. Farid",
+      "designation": "Professor, Department of CSE",
+      "institution": "United International University, Dhaka",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Dr. Chowdhury Mofizur Rahman",
+      "designation": "Professor, Department of CSE",
+      "institution": "BRAC University, Dhaka",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Dr. Mohammod Abul Kashem",
+      "designation": "Professor, Department of CSE",
+      "institution": "Dhaka University of Engineering and Technology (DUET)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Dr. Swakkhar Shatabda",
+      "designation": "Professor, Department of CSE",
+      "institution": "BRAC University, Dhaka",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Dr. Mohammad Kaykobad",
+      "designation": "Distinguished Professor, Department of CSE",
+      "institution": "BRAC University, Dhaka",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Dr. Boshir Ahmed",
+      "designation": "Professor, Department of CSE",
+      "institution": "Rajshahi University of Engineering & Technology (RUET)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Prof. Dr. Md. Rabiul Islam",
+      "designation": "Professor, Department of CSE",
+      "institution": "Rajshahi University of Engineering & Technology (RUET)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Prof. Dr. Md. Zulfiker Mahmud",
+      "designation": "Professor, Department of CSE",
+      "institution": "Jagannath University, Dhaka",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Prof. Dr. Md. Abu Layek",
+      "designation": "Chairman & Professor, Department of CSE",
+      "institution": "Jagannath University, Dhaka",
+      "country": "Bangladesh"
+    }
+  ],
+  "conferenceChairs": [
+    {
+      "name": "Dr. Imran Mahmud",
+      "designation": "Conference Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Dr. Muhammad Firoz Mridha",
+      "designation": "Conference Chair",
+      "institution": "American International University-Bangladesh (AIUB)",
+      "country": "Bangladesh"
+    }
+  ],
+  "conferenceCoChairs": [
+    {
+      "name": "Md. Fokhray Hossain",
+      "designation": "Conference Co-Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ],
+  "organizingChairs": [
+    {
+      "name": "S M Hasan Mahmud",
+      "designation": "Organizing Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Kamrul Islam Shahin",
+      "designation": "Organizing Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Afsana Begum",
+      "designation": "Organizing Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ],
+  "organizingCoChairs": [
+    {
+      "name": "Md. Abdul Kader",
+      "designation": "Organizing Co-Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Shabnom Mustary",
+      "designation": "Organizing Co-Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ],
+  "organizingSecretaries": [
+    {
+      "name": "A. H. M. Saifullah Sadi",
+      "designation": "Organizing Secretary",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Md. Fazla Elahe",
+      "designation": "Organizing Secretary",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ],
+  "technicalChairs": [
+    {
+      "name": "Rubaiyat Islam",
+      "designation": "Technical Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Nusrat Jahan",
+      "designation": "Technical Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ],
+  "technicalCoChairs": [
+    {
+      "name": "Ms. Shahina Haque",
+      "designation": "Technical Co-Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Mohammad Kamal Hossain Foraji",
+      "designation": "Technical Co-Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Md. Shafikul Islam",
+      "designation": "Technical Co-Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ],
+  "technicalSecretaries": [
+    {
+      "name": "Mr. Uttam Kumar Dey",
+      "designation": "Technical Secretary",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Md. Ashek -Al- Aziz",
+      "designation": "Technical Secretary",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ],
+  "financeChairs": [
+    {
+      "name": "Mr. A.H.M Shahariar Parvez",
+      "designation": "Finance Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Mr. Mahbubul Alam",
+      "designation": "Finance Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Mr. Md. Mozammelul Haque",
+      "designation": "Finance Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ],
+  "registrationChairs": [
+    {
+      "name": "Mr. Md. Khaled Sohel",
+      "designation": "Registration & Kit Distribution Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Mr. K. M. Shahriar Islam",
+      "designation": "Registration & Kit Distribution Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Mr. Fazla Rabby Raihan",
+      "designation": "Registration & Kit Distribution Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ],
+  "publicityChairs": [
+    {
+      "name": "Mohammad Mobarak Hossain",
+      "designation": "Publicity Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Mr. Md. Shohel Arman",
+      "designation": "Publicity Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Ms. Syeda Sumaia Sultana",
+      "designation": "Publicity Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Ms. Shahrin Islam",
+      "designation": "Publicity Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ],
+  "publicationChairs": [
+    {
+      "name": "Sultan Mahmud",
+      "designation": "Publication Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ],
+  "localArrangementChairs": [
+    {
+      "name": "Mr. Khalid Been Badruzzaman Biplob",
+      "designation": "Local Arrangement Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    },
+    {
+      "name": "Mr. Md. Suhag Ali",
+      "designation": "Local Arrangement Chair",
+      "institution": "Daffodil International University (DIU)",
+      "country": "Bangladesh"
+    }
+  ]
+}
