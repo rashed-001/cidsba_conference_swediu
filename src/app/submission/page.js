@@ -1,105 +1,100 @@
-import { FaFileAlt, FaCheckCircle, FaCalendarAlt } from 'react-icons/fa';
+import { FaFileAlt, FaCheckCircle, FaCalendarAlt, FaDownload, FaArrowRight } from 'react-icons/fa';
 
 export default function Submission() {
   const guidelines = [
-    'Papers must be original and not previously published',
-    'Maximum length: 6 pages (IEEE format)',
-    'All submissions must be in English',
-    'Papers must follow IEEE conference template',
-    'Submit through the conference management system',
-    'All papers will undergo double-blind peer review',
+    'Papers must be original, technically sound, and not previously published or under review elsewhere.',
+    'Maximum manuscript length is 6 pages in the IEEE conference format.',
+    'Submissions must be written in English and follow the official IEEE style guidelines.',
+    'Authors should use the conference template and include complete author/speaker affiliations.',
+    'All papers must be submitted via the official conference management platform.',
+    'Each manuscript will undergo a double-blind peer review process.',
   ];
 
   const importantDates = [
     { event: 'Announcement Date', date: 'June 2026' },
-    { event: 'Paper Submission Deadline', date: 'TBA' },
-    { event: 'Acceptance Notification', date: 'TBA' },
-    { event: 'Camera-Ready Submission', date: 'TBA' },
-    { event: 'Early Bird Registration', date: 'TBA' },
+    { event: 'Paper Submission Deadline', date: 'October 2026' },
+    { event: 'Acceptance Notification', date: 'December 2026' },
+    { event: 'Camera-Ready Submission', date: 'January 2027' },
+    { event: 'Early Bird Registration', date: 'January 2027' },
     { event: 'Conference Dates', date: 'February 2027' },
   ];
 
   return (
-    <div className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-center mb-12 text-diu-green">
-          Paper Submission
-        </h1>
+    <div className="section bg-slate-50">
+      <div className="container">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="section-label">Call for papers</span>
+          <h1 className="section-heading">Submit your research to CIDSBA 2027</h1>
+          <p className="section-copy mx-auto">
+            Share your original work in computational intelligence, data science, and business applications with a global network of scholars and practitioners.
+          </p>
+        </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Submission Guidelines */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <div className="flex items-center mb-6">
-              <FaFileAlt className="text-3xl text-diu-green mr-4" />
-              <h2 className="text-2xl font-bold text-gray-900">
-                Submission Guidelines
-              </h2>
+        <div className="mx-auto mt-12 max-w-6xl space-y-8">
+          <div className="soft-card p-8 md:p-10">
+            <div className="mb-6 flex items-center gap-3">
+              <div className="feature-icon h-12 w-12 bg-sky-100 text-sky-700">
+                <FaFileAlt />
+              </div>
+              <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Submission guidelines</h2>
             </div>
-            <ul className="space-y-3">
+            <div className="grid gap-4 md:grid-cols-2">
               {guidelines.map((guideline, index) => (
-                <li key={index} className="flex items-start">
-                  <FaCheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">{guideline}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Important Dates */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <div className="flex items-center mb-6">
-              <FaCalendarAlt className="text-3xl text-diu-green mr-4" />
-              <h2 className="text-2xl font-bold text-gray-900">
-                Important Dates
-              </h2>
-            </div>
-            <div className="space-y-4">
-              {importantDates.map((item, index) => (
-                <div key={index} className="flex justify-between items-center border-b border-gray-200 pb-3">
-                  <span className="font-medium text-gray-900">{item.event}</span>
-                  <span className="text-diu-green font-semibold">{item.date}</span>
+                <div key={index} className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <FaCheckCircle className="mt-1 text-green-600" />
+                  <span className="leading-7 text-slate-700">{guideline}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Submission Button */}
-          <div className="bg-gradient-to-r from-diu-green to-primary-700 rounded-lg shadow-md p-8 text-center text-white">
-            <h2 className="text-2xl font-bold mb-4">
-              Ready to Submit?
-            </h2>
-            <p className="mb-6 text-gray-100">
-              Submit your research paper through our conference management system
-            </p>
-            <button className="bg-diu-gold hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-lg transition-colors">
-              Submit Paper
-            </button>
+          <div className="soft-card p-8 md:p-10">
+            <div className="mb-6 flex items-center gap-3">
+              <div className="feature-icon h-12 w-12 bg-amber-100 text-amber-700">
+                <FaCalendarAlt />
+              </div>
+              <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Important dates</h2>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {importantDates.map((item) => (
+                <div key={item.event} className="rounded-2xl border border-slate-200 bg-white p-5">
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{item.event}</div>
+                  <div className="mt-3 text-2xl font-black text-slate-900">{item.date}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Paper Template */}
-          <div className="bg-white rounded-lg shadow-md p-8 mt-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Paper Template
-            </h2>
-            <p className="text-gray-700 mb-4">
-              Please use the official IEEE conference template for your submission.
+          <div className="rounded-[2rem] bg-[linear-gradient(135deg,#061a34,#123e72_55%,#0b7ca4)] p-8 text-center text-white shadow-[0_20px_60px_rgba(13,27,61,0.18)] md:p-10">
+            <h2 className="text-2xl font-black md:text-3xl">Ready to submit your work?</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-200">
+              Join global researchers and innovators by submitting a high-quality paper that advances the frontiers of computational intelligence and data-driven business transformation.
             </p>
-            <div className="space-y-3">
-              <a
-                href="#"
-                className="block bg-gray-100 hover:bg-gray-200 p-4 rounded-lg transition-colors"
-              >
-                <span className="font-medium text-diu-green">
-                  Download LaTeX Template →
-                </span>
+            <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+              <button className="gold-button">Submit Paper</button>
+              <button className="secondary-button border-white bg-white/10 text-white hover:bg-white/20">Download Template</button>
+            </div>
+          </div>
+
+          <div className="soft-card p-8 md:p-10">
+            <h2 className="text-2xl font-black text-slate-900 md:text-3xl">Paper templates</h2>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
+              Please use the official IEEE manuscript template to ensure full compatibility with review and publication requirements.
+            </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <a href="#" className="flex items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 p-5 text-left transition hover:border-sky-200 hover:bg-sky-50">
+                <div>
+                  <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">LaTeX</div>
+                  <div className="mt-2 text-lg font-bold text-slate-900">Download LaTeX template</div>
+                </div>
+                <FaDownload className="text-xl text-sky-700" />
               </a>
-              <a
-                href="#"
-                className="block bg-gray-100 hover:bg-gray-200 p-4 rounded-lg transition-colors"
-              >
-                <span className="font-medium text-diu-green">
-                  Download Word Template →
-                </span>
+              <a href="#" className="flex items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 p-5 text-left transition hover:border-sky-200 hover:bg-sky-50">
+                <div>
+                  <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Word</div>
+                  <div className="mt-2 text-lg font-bold text-slate-900">Download Word template</div>
+                </div>
+                <FaArrowRight className="text-xl text-sky-700" />
               </a>
             </div>
           </div>

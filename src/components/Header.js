@@ -18,78 +18,68 @@ export default function Header() {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { 
-      name: 'About', 
+    {
+      name: 'About',
       href: '#',
       dropdown: [
         { name: 'Committees', href: '/committees' },
         { name: 'Speakers', href: '/speakers' },
         { name: 'Sponsors', href: '/sponsors' },
-      ]
+      ],
     },
     { name: 'Schedule', href: '/schedule' },
     { name: 'Submission', href: '/submission' },
     { name: 'Registration', href: '/registration' },
-    { 
-      name: 'Resources', 
+    {
+      name: 'Resources',
       href: '#',
       dropdown: [
         { name: 'Downloads', href: '/downloads' },
         { name: 'FAQ', href: '/faq' },
         { name: 'Gallery', href: '/gallery' },
         { name: 'News', href: '/news' },
-      ]
+      ],
     },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-lg' : 'bg-white shadow-md'
-    }`}>
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="bg-diu-green text-white w-12 h-12 rounded-full flex items-center justify-center font-bold">
-                IEEE
-              </div>
-              <div>
-                <span className="text-xl font-bold text-diu-green block">CIDSBA 2027</span>
-                <span className="text-xs text-gray-600">Daffodil International University</span>
-              </div>
-            </Link>
-          </div>
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'border-b border-slate-200 bg-white/90 shadow-lg backdrop-blur-xl' : 'bg-white/80 shadow-sm backdrop-blur-xl'
+      }`}
+    >
+      <nav className="container">
+        <div className="flex h-20 items-center justify-between gap-4">
+          <Link href="/" className="flex min-w-0 items-center gap-3">
+            <img src="/images/ConferenceLogo.png" alt="CIDSBA 2027 conference logo" className="h-12 w-auto max-w-[240px] object-contain md:h-14" />
+          </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-1">
+          <div className="hidden items-center gap-1 lg:flex">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
                   <>
-                    <button className="text-gray-700 hover:text-diu-green px-3 py-2 text-sm font-medium transition-colors flex items-center">
+                    <button className="flex items-center rounded-full px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]">
                       {item.name}
-                      <FaChevronDown className="ml-1 text-xs" />
+                      <FaChevronDown className="ml-1 text-[10px]" />
                     </button>
-                    <div className="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                      <div className="py-1">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-diu-green hover:text-white transition-colors"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
+                    <div className="invisible absolute left-0 top-full mt-2 w-52 rounded-2xl border border-slate-200 bg-white p-2 opacity-0 shadow-xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="block rounded-xl px-3 py-2 text-sm text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
                     </div>
                   </>
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-700 hover:text-diu-green px-3 py-2 text-sm font-medium transition-colors"
+                    className="rounded-full px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[var(--navy)]"
                   >
                     {item.name}
                   </Link>
@@ -98,38 +88,43 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Mobile menu button */}
+          <div className="hidden items-center gap-3 lg:flex">
+            <img src="/images/diu-logo.png" alt="DIU logo" className="h-12 w-12 rounded-full border border-slate-200 bg-white p-1 shadow-sm" />
+            <Link href="/registration" className="gold-button">
+              Register Now
+            </Link>
+          </div>
+
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-diu-green p-2"
+              className="rounded-full border border-slate-200 p-2 text-slate-700 transition hover:bg-slate-100"
             >
-              {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+              {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-4">
+          <div className="border-t border-slate-200 pb-4 pt-3 lg:hidden">
             {navigation.map((item) => (
               <div key={item.name}>
                 {item.dropdown ? (
                   <>
                     <button
                       onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
-                      className="w-full text-left text-gray-700 hover:text-diu-green px-3 py-2 text-base font-medium flex items-center justify-between"
+                      className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-base font-medium text-slate-700 transition hover:bg-slate-100"
                     >
                       {item.name}
-                      <FaChevronDown className={`text-xs transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
+                      <FaChevronDown className={`text-[10px] transition ${openDropdown === item.name ? 'rotate-180' : ''}`} />
                     </button>
                     {openDropdown === item.name && (
-                      <div className="pl-4">
+                      <div className="px-3 pb-2">
                         {item.dropdown.map((subItem) => (
                           <Link
                             key={subItem.name}
                             href={subItem.href}
-                            className="block text-gray-600 hover:text-diu-green px-3 py-2 text-sm"
+                            className="block rounded-xl px-3 py-2 text-sm text-slate-600 transition hover:bg-slate-100 hover:text-[var(--navy)]"
                             onClick={() => setIsOpen(false)}
                           >
                             {subItem.name}
@@ -141,7 +136,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block text-gray-700 hover:text-diu-green px-3 py-2 text-base font-medium"
+                    className="block rounded-xl px-3 py-2 text-base font-medium text-slate-700 transition hover:bg-slate-100"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

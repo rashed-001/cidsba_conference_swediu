@@ -8,59 +8,45 @@ export default function FAQ() {
 
   const toggleItem = (category, index) => {
     const key = `${category}-${index}`;
-    setOpenItems(prev => ({
+    setOpenItems((prev) => ({
       ...prev,
-      [key]: !prev[key]
+      [key]: !prev[key],
     }));
   };
 
   return (
-    <div className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <FaQuestionCircle className="text-6xl text-diu-green mx-auto mb-4" />
-          <h1 className="text-4xl font-bold mb-4 text-diu-green">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Find answers to common questions about CIDSBA 2027
+    <div className="section bg-slate-50">
+      <div className="container">
+        <div className="mx-auto max-w-3xl text-center">
+          <FaQuestionCircle className="mx-auto mb-5 text-5xl text-sky-700" />
+          <span className="section-label">FAQ</span>
+          <h1 className="section-heading">Frequently asked questions</h1>
+          <p className="section-copy mx-auto">
+            Browse answers to the most common questions about participation, paper submission, registration, and event logistics.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="mx-auto mt-12 max-w-5xl space-y-10">
           {faqs.map((section, sectionIndex) => (
-            <div key={sectionIndex} className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b-2 border-diu-gold">
-                {section.category}
-              </h2>
+            <div key={sectionIndex}>
+              <h2 className="mb-6 text-2xl font-black text-slate-900 md:text-3xl">{section.category}</h2>
               <div className="space-y-4">
                 {section.questions.map((item, itemIndex) => {
                   const key = `${section.category}-${itemIndex}`;
                   const isOpen = openItems[key];
 
                   return (
-                    <div
-                      key={itemIndex}
-                      className="bg-white rounded-lg shadow-md overflow-hidden"
-                    >
+                    <div key={itemIndex} className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_14px_30px_rgba(13,27,61,0.04)]">
                       <button
                         onClick={() => toggleItem(section.category, itemIndex)}
-                        className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                        className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left transition hover:bg-slate-50"
                       >
-                        <span className="text-left font-semibold text-gray-900 pr-4">
-                          {item.question}
-                        </span>
-                        {isOpen ? (
-                          <FaChevronUp className="text-diu-green flex-shrink-0" />
-                        ) : (
-                          <FaChevronDown className="text-diu-green flex-shrink-0" />
-                        )}
+                        <span className="pr-4 text-base font-semibold text-slate-900 md:text-lg">{item.question}</span>
+                        {isOpen ? <FaChevronUp className="flex-shrink-0 text-sky-700" /> : <FaChevronDown className="flex-shrink-0 text-sky-700" />}
                       </button>
                       {isOpen && (
-                        <div className="px-6 pb-4">
-                          <p className="text-gray-600 leading-relaxed">
-                            {item.answer}
-                          </p>
+                        <div className="border-t border-slate-200 px-6 py-4">
+                          <p className="leading-7 text-slate-600">{item.answer}</p>
                         </div>
                       )}
                     </div>
@@ -71,22 +57,12 @@ export default function FAQ() {
           ))}
         </div>
 
-        {/* Contact for More Questions */}
-        <div className="max-w-4xl mx-auto mt-12">
-          <div className="bg-white rounded-lg shadow-md p-8 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Still Have Questions?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Can't find the answer you're looking for? Our team is here to help.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-diu-green hover:bg-primary-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
-            >
-              Contact Us
-            </a>
-          </div>
+        <div className="mx-auto mt-14 max-w-4xl rounded-[2rem] bg-white p-8 text-center shadow-[0_18px_50px_rgba(13,27,61,0.06)] md:p-10">
+          <h3 className="text-2xl font-black text-slate-900 md:text-3xl">Still have questions?</h3>
+          <p className="mt-4 text-base leading-7 text-slate-600">
+            Reach out to our organizing team for more information about the conference and participation details.
+          </p>
+          <a href="/contact" className="primary-button mt-8">Contact us</a>
         </div>
       </div>
     </div>

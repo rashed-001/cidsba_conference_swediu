@@ -1,85 +1,65 @@
-import { FaUser, FaUsers, FaGraduationCap, FaGlobe } from 'react-icons/fa';
+import { FaUser, FaUsers, FaGraduationCap, FaGlobe, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 
 export default function Registration() {
   const categories = [
     {
-      icon: <FaGraduationCap className="text-4xl text-diu-green" />,
+      icon: <FaGraduationCap className="text-4xl text-sky-700" />,
       title: 'Student (IEEE Member)',
       price: 'TBA',
-      features: [
-        'Conference Access',
-        'Conference Kit',
-        'Lunch & Refreshments',
-        'Certificate',
-      ]
+      features: ['Conference access', 'Conference kit', 'Lunch & refreshments', 'Certificate'],
     },
     {
-      icon: <FaUser className="text-4xl text-diu-green" />,
+      icon: <FaUser className="text-4xl text-sky-700" />,
       title: 'Regular (IEEE Member)',
       price: 'TBA',
-      features: [
-        'Conference Access',
-        'Conference Kit',
-        'Lunch & Refreshments',
-        'Certificate',
-        'Proceedings',
-      ]
+      features: ['Conference access', 'Conference kit', 'Lunch & refreshments', 'Certificate', 'Proceedings'],
     },
     {
-      icon: <FaUsers className="text-4xl text-diu-green" />,
+      icon: <FaUsers className="text-4xl text-sky-700" />,
       title: 'Regular (Non-IEEE Member)',
       price: 'TBA',
-      features: [
-        'Conference Access',
-        'Conference Kit',
-        'Lunch & Refreshments',
-        'Certificate',
-        'Proceedings',
-      ]
+      features: ['Conference access', 'Conference kit', 'Lunch & refreshments', 'Certificate', 'Proceedings'],
     },
     {
-      icon: <FaGlobe className="text-4xl text-diu-green" />,
+      icon: <FaGlobe className="text-4xl text-sky-700" />,
       title: 'International Participant',
       price: 'TBA',
-      features: [
-        'Conference Access',
-        'Conference Kit',
-        'Lunch & Refreshments',
-        'Certificate',
-        'Proceedings',
-      ]
+      features: ['Conference access', 'Conference kit', 'Lunch & refreshments', 'Certificate', 'Proceedings'],
     },
   ];
 
-  return (
-    <div className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-center mb-4 text-diu-green">
-          Registration
-        </h1>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Choose your registration category and join us at CIDSBA 2027
-        </p>
+  const steps = [
+    'Select the registration category that matches your participation.',
+    'Complete the online registration form with your academic and contact details.',
+    'Submit the payment using the official registration channel.',
+    'Upload your proof of payment and receive confirmation by email.',
+  ];
 
-        {/* Registration Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {categories.map((category, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="bg-gradient-to-r from-diu-green to-primary-700 text-white p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  {category.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{category.title}</h3>
-                <p className="text-3xl font-bold">{category.price}</p>
+  return (
+    <div className="section bg-slate-50">
+      <div className="container">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="section-label">Registration</span>
+          <h1 className="section-heading">Reserve your place at CIDSBA 2027</h1>
+          <p className="section-copy mx-auto">
+            Choose the registration option that suits your role and join a distinguished community of researchers, professionals, and students.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 lg:grid-cols-4">
+          {categories.map((category) => (
+            <div key={category.title} className="overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_16px_40px_rgba(13,27,61,0.08)]">
+              <div className="bg-[linear-gradient(135deg,#0d1b3d,#1d6fb8)] p-6 text-center text-white">
+                <div className="mb-4 flex justify-center">{category.icon}</div>
+                <h3 className="text-lg font-bold">{category.title}</h3>
+                <div className="mt-3 text-3xl font-black text-amber-300">{category.price}</div>
               </div>
               <div className="p-6">
-                <ul className="space-y-3">
-                  {category.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-700">
-                      <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L7 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {feature}
+                <ul className="space-y-3 text-sm text-slate-700">
+                  {category.features.map((feature) => (
+                    <li key={feature} className="flex items-center gap-2">
+                      <FaCheckCircle className="text-green-600" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -88,30 +68,35 @@ export default function Registration() {
           ))}
         </div>
 
-        {/* Registration Instructions */}
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Registration Instructions
-            </h2>
-            <ol className="space-y-4 list-decimal list-inside text-gray-700">
-              <li>Select your registration category from the options above</li>
-              <li>Complete the online registration form</li>
-              <li>Submit payment through the designated payment method</li>
-              <li>Upload proof of payment</li>
-              <li>Receive confirmation email with registration details</li>
-            </ol>
-          </div>
+        <div className="mx-auto mt-12 max-w-6xl rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_50px_rgba(13,27,61,0.06)] md:p-10">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <span className="section-label">How to register</span>
+              <h2 className="section-heading mt-4">Simple, secure, and fast</h2>
+              <p className="section-copy mt-4">
+                Complete your registration in a few steps and receive confirmation for your attendance at the conference.
+              </p>
+            </div>
 
-          <div className="bg-gradient-to-r from-diu-green to-primary-700 rounded-lg shadow-md p-8 text-center text-white">
-            <h2 className="text-2xl font-bold mb-4">
-              Register Now
-            </h2>
-            <p className="mb-6 text-gray-100">
-              Secure your spot at CIDSBA 2027
-            </p>
-            <button className="bg-diu-gold hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-lg transition-colors">
-              Complete Registration
+            <div className="space-y-4">
+              {steps.map((step, index) => (
+                <div key={step} className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-sky-100 text-sm font-black text-sky-700">{index + 1}</div>
+                  <p className="leading-7 text-slate-700">{step}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 rounded-[2rem] bg-[linear-gradient(135deg,#061a34,#123e72_55%,#0b7ca4)] p-8 text-center text-white shadow-[0_20px_60px_rgba(13,27,61,0.18)] md:p-10">
+          <h2 className="text-2xl font-black md:text-3xl">Register now to secure your seat</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-200">
+            Be part of a highly engaging conference experience featuring keynote lectures, research discussion, and international collaboration.
+          </p>
+          <div className="mt-8 flex justify-center">
+            <button className="gold-button">
+              Complete Registration <FaArrowRight className="ml-2" />
             </button>
           </div>
         </div>

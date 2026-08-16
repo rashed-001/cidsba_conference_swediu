@@ -3,36 +3,29 @@ import { keynoteSpeakers, invitedSpeakers } from '@/data/speakers';
 
 export default function Speakers() {
   return (
-    <div className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-center mb-4 text-diu-green">
-          Conference Speakers
-        </h1>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Distinguished speakers from leading institutions worldwide
-        </p>
+    <div className="section bg-slate-50">
+      <div className="container">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="section-label">Featured speakers</span>
+          <h1 className="section-heading">Meet our distinguished speakers</h1>
+          <p className="section-copy mx-auto">
+            CIDSBA 2027 brings together influential researchers, academics, and industry leaders to share ideas shaping the future of intelligence and data-driven innovation.
+          </p>
+        </div>
 
-        {/* Keynote Speakers */}
-        <div className="mb-16">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Keynote Speakers
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mx-auto mt-12 max-w-6xl space-y-14">
+          <div>
+            <h2 className="text-center text-3xl font-black text-slate-900 md:text-4xl">Keynote speakers</h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {keynoteSpeakers.map((speaker) => (
                 <SpeakerCard key={speaker.id} {...speaker} />
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Invited Speakers */}
-        <div>
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Invited Speakers
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div>
+            <h2 className="text-center text-3xl font-black text-slate-900 md:text-4xl">Invited speakers</h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {invitedSpeakers.map((speaker) => (
                 <SpeakerCard key={speaker.id} {...speaker} />
               ))}
@@ -40,22 +33,12 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* Call for Speakers */}
-        <div className="max-w-4xl mx-auto mt-16">
-          <div className="bg-gradient-to-r from-diu-green to-primary-700 rounded-lg shadow-xl p-8 text-center text-white">
-            <h2 className="text-2xl font-bold mb-4">
-              Interested in Speaking?
-            </h2>
-            <p className="mb-6 text-gray-100">
-              We welcome proposals from experts who would like to share their insights
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-diu-gold hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-lg transition-colors"
-            >
-              Contact Us
-            </a>
-          </div>
+        <div className="mx-auto mt-14 max-w-4xl rounded-[2rem] bg-[linear-gradient(135deg,#061a34,#123e72_55%,#0b7ca4)] p-8 text-center text-white shadow-[0_20px_60px_rgba(13,27,61,0.18)] md:p-10">
+          <h2 className="text-2xl font-black md:text-3xl">Interested in speaking at the conference?</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-200">
+            We welcome experts and researchers who would like to contribute a keynote, invited talk, or panel session.
+          </p>
+          <a href="/contact" className="gold-button mt-8">Contact us</a>
         </div>
       </div>
     </div>

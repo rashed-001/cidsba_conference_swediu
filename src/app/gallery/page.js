@@ -5,124 +5,90 @@ import { FaTimes } from 'react-icons/fa';
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Placeholder gallery items - replace with actual images
   const galleryItems = [
-    { id: 1, title: "Conference Opening Ceremony", category: "events", year: "2023" },
-    { id: 2, title: "Keynote Presentation", category: "presentations", year: "2023" },
-    { id: 3, title: "Technical Session", category: "sessions", year: "2023" },
-    { id: 4, title: "Poster Presentations", category: "posters", year: "2023" },
-    { id: 5, title: "Networking Session", category: "networking", year: "2023" },
-    { id: 6, title: "Award Ceremony", category: "awards", year: "2023" },
-    { id: 7, title: "Workshop Activities", category: "workshops", year: "2023" },
-    { id: 8, title: "Panel Discussion", category: "events", year: "2023" },
-    { id: 9, title: "Closing Ceremony", category: "events", year: "2023" },
+    { id: 1, title: 'Conference opening ceremony', category: 'events', year: '2023' },
+    { id: 2, title: 'Keynote presentation', category: 'presentations', year: '2023' },
+    { id: 3, title: 'Technical session', category: 'sessions', year: '2023' },
+    { id: 4, title: 'Poster presentations', category: 'posters', year: '2023' },
+    { id: 5, title: 'Networking session', category: 'networking', year: '2023' },
+    { id: 6, title: 'Award ceremony', category: 'awards', year: '2023' },
+    { id: 7, title: 'Workshop activities', category: 'workshops', year: '2023' },
+    { id: 8, title: 'Panel discussion', category: 'events', year: '2023' },
+    { id: 9, title: 'Closing ceremony', category: 'events', year: '2023' },
   ];
 
-  const categories = ["all", "events", "presentations", "sessions", "workshops", "networking", "awards", "posters"];
-  const [activeCategory, setActiveCategory] = useState("all");
+  const categories = ['all', 'events', 'presentations', 'sessions', 'workshops', 'networking', 'awards', 'posters'];
+  const [activeCategory, setActiveCategory] = useState('all');
 
-  const filteredItems = activeCategory === "all" 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeCategory);
+  const filteredItems = activeCategory === 'all' ? galleryItems : galleryItems.filter((item) => item.category === activeCategory);
 
   return (
-    <div className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-center mb-4 text-diu-green">
-          Conference Gallery
-        </h1>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Highlights from previous CIDSBA conferences
-        </p>
+    <div className="section bg-slate-50">
+      <div className="container">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="section-label">Gallery</span>
+          <h1 className="section-heading">Conference highlights</h1>
+          <p className="section-copy mx-auto">
+            A glimpse into the vibrant atmosphere of our academic and research community during previous conference editions.
+          </p>
+        </div>
 
-        {/* Category Filter */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <div className="flex flex-wrap justify-center gap-3">
+        <div className="mx-auto mt-12 max-w-5xl">
+          <div className="mb-8 flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                  activeCategory === category
-                    ? 'bg-diu-green text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100'
+                className={`rounded-full px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] transition ${
+                  activeCategory === category ? 'bg-[var(--navy)] text-white' : 'bg-white text-slate-700 shadow-sm hover:bg-slate-100'
                 }`}
               >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
+                {category}
               </button>
+            ))}
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {filteredItems.map((item) => (
+              <div key={item.id} onClick={() => setSelectedImage(item)} className="group cursor-pointer overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_14px_30px_rgba(13,27,61,0.05)] transition hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(13,27,61,0.1)]">
+                <div className="relative flex aspect-video items-center justify-center bg-[linear-gradient(135deg,#0d1b3d,#1d6fb8_52%,#0b7ca4)] text-5xl font-black text-white/60">
+                  {item.id}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/15 opacity-0 transition group-hover:opacity-100">
+                    <span className="rounded-full border border-white/60 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.12em] text-white">View</span>
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+                  <p className="mt-2 text-sm uppercase tracking-[0.12em] text-slate-500">{item.year}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {filteredItems.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => setSelectedImage(item)}
-              className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-shadow group"
-            >
-              <div className="aspect-video bg-gradient-to-br from-diu-green to-primary-700 flex items-center justify-center relative overflow-hidden">
-                {/* Placeholder - replace with actual images */}
-                <div className="text-white text-4xl font-bold opacity-50 group-hover:opacity-70 transition-opacity">
-                  {item.id}
-                </div>
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all flex items-center justify-center">
-                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity font-semibold">
-                    View Image
-                  </span>
-                </div>
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-gray-900">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.year}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Lightbox Modal */}
         {selectedImage && (
-          <div 
-            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <button
-              className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
-              onClick={() => setSelectedImage(null)}
-            >
-              <FaTimes size={32} />
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4" onClick={() => setSelectedImage(null)}>
+            <button className="absolute right-5 top-5 text-3xl text-white" onClick={() => setSelectedImage(null)}>
+              <FaTimes />
             </button>
-            <div className="max-w-5xl w-full">
-              <div className="aspect-video bg-gradient-to-br from-diu-green to-primary-700 flex items-center justify-center rounded-lg">
-                <div className="text-white text-6xl font-bold">
-                  {selectedImage.id}
-                </div>
+            <div className="w-full max-w-5xl">
+              <div className="flex aspect-video items-center justify-center rounded-[1.5rem] bg-[linear-gradient(135deg,#0d1b3d,#1d6fb8_52%,#0b7ca4)] text-7xl font-black text-white/80">
+                {selectedImage.id}
               </div>
-              <div className="text-white mt-4 text-center">
-                <h3 className="text-2xl font-bold">{selectedImage.title}</h3>
-                <p className="text-gray-300">{selectedImage.year}</p>
+              <div className="mt-4 text-center text-white">
+                <h3 className="text-2xl font-black">{selectedImage.title}</h3>
+                <p className="mt-2 text-slate-300">{selectedImage.year}</p>
               </div>
             </div>
           </div>
         )}
 
-        {/* Upload Info */}
-        <div className="max-w-4xl mx-auto mt-16">
-          <div className="bg-white rounded-lg shadow-md p-8 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Share Your Conference Moments
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Have photos from the conference? We'd love to feature them in our gallery!
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-diu-green hover:bg-primary-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
-            >
-              Submit Photos
-            </a>
-          </div>
+        <div className="mx-auto mt-14 max-w-4xl rounded-[2rem] bg-white p-8 text-center shadow-[0_18px_50px_rgba(13,27,61,0.06)] md:p-10">
+          <h3 className="text-2xl font-black text-slate-900 md:text-3xl">Share your conference moments</h3>
+          <p className="mt-4 text-base leading-7 text-slate-600">
+            Have photos from past editions or your event participation? We’d love to feature them in the official conference gallery.
+          </p>
+          <a href="/contact" className="primary-button mt-8">Submit photos</a>
         </div>
       </div>
     </div>
