@@ -269,8 +269,15 @@ export default function Home() {
             </div>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-              {['IEEE', 'DIU', 'AI Research Lab', 'Data Science Forum', 'Business Innovation Hub'].map((name) => (
-                <div key={name} className="rounded-2xl border border-white/15 bg-white/8 px-4 py-5 text-center text-sm font-semibold uppercase tracking-[0.18em] text-slate-100 backdrop-blur-sm">
+              {[
+                'IEEE CIS',
+                'AI Task Force',
+                'Dept of SWE, DIU',
+                'Data Science Lab, Dept of SWE, DIU',
+                'Software Engineering Club, Dept of SWE, DIU',
+                'SQAT, Dept of SWE, DIU',
+              ].map((name) => (
+                <div key={name} className="rounded-2xl border border-white/15 bg-white/8 px-4 py-5 text-center text-xs font-semibold uppercase tracking-[0.14em] text-slate-100 backdrop-blur-sm">
                   {name}
                 </div>
               ))}

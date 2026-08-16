@@ -54,7 +54,7 @@ export default function Footer() {
             <ul className="mt-5 space-y-4 text-sm text-slate-300">
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="mt-1 text-amber-300" />
-                <span>Daffodil International University, Dhaka, Bangladesh</span>
+                <span>Dept of Software Engineering, Daffodil International University, Birulia, Savar, Dhaka, Bangladesh.</span>
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-amber-300" />
