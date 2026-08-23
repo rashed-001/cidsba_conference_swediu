@@ -366,7 +366,7 @@ export default function Home() {
               {
                 name: 'Daffodil Smart City',
                 detail: 'The green, connected campus hosting CIDSBA 2027.',
-                image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80',
+                image: 'https://daffodilvarsity.edu.bd/images/hero.jpg',
               },
             ].map((place) => (
               <article key={place.name} className="overflow-hidden rounded-2xl border border-[#e7ddce] bg-[#fffdf8] shadow-sm">
