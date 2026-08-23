@@ -96,6 +96,17 @@ export const technicalCoChairs = [
   }
 ];
 
+export const webAndITChairs = [
+  {
+    name: "Md. Rashedul Alam",
+    institution: "Lecturer, Dept of Software Engineering, Daffodil International University"
+  },
+  {
+    name: "Rahat Uddin Azad",
+    institution: "Lecturer, Dept of Software Engineering, Daffodil International University"
+  }
+];
+
 export const technicalSecretaries = [
   {
     name: "Mr. Uttam Kumar Dey",

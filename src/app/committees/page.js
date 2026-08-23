@@ -8,6 +8,7 @@ import {
   organizingSecretaries,
   technicalChairs,
   technicalCoChairs,
+  webAndITChairs,
   technicalSecretaries,
   financeChairs,
   registrationChairs,
@@ -53,6 +54,7 @@ export default function Committees() {
           </div>
           <CommitteeSection title="Technical chairs" members={technicalChairs} columns={2} />
           <CommitteeSection title="Technical co-chairs" members={technicalCoChairs} columns={2} />
+          <CommitteeSection title="Web & IT chairs" members={webAndITChairs} columns={2} />
           <CommitteeSection title="Technical secretaries" members={technicalSecretaries} columns={2} />
 
           <CommitteeSection title="Finance chairs" members={financeChairs} columns={2} />

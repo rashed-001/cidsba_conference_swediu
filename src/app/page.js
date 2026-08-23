@@ -330,23 +330,65 @@ export default function Home() {
             <p className="section-copy">Meet the community beyond the paper session through focused workshops, tutorials, and partner-led events.</p>
             <Link href="/contact#events" className="primary-button mt-7">Propose an Event</Link>
           </div>
-          <div id="local-attraction" className="rounded-[2rem] bg-[#26352f] p-8 text-[#fffdf8]">
+          <div className="rounded-[2rem] bg-[#26352f] p-8 text-[#fffdf8]">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e6c78f]">While you are here</span>
             <h3 className="mt-4 text-2xl font-black">Discover Savar and Dhaka</h3>
             <p className="mt-4 leading-8 text-[#d9e1d8]">Plan time for local history, riverfront walks, Bengali cuisine, and the cultural energy surrounding Daffodil Smart City.</p>
-            <Link href="/contact#travel" className="mt-6 inline-flex font-bold text-[#e6c78f]">Plan your visit →</Link>
+            <Link href="#local-attraction" className="mt-6 inline-flex font-bold text-[#e6c78f]">Explore places to visit →</Link>
           </div>
         </div>
       </section>
 
-      <section id="archive" className="section bg-[#f3e4c9]">
+      <section id="local-attraction" className="section bg-[#f3eee4]">
+        <div className="container">
+          <div>
+            <span className="section-label">Local attraction</span>
+            <h2 className="section-heading">History, culture, and campus life</h2>
+            <p className="section-copy">Make the most of your visit with a few memorable places around Dhaka and the Daffodil Smart City campus.</p>
+          </div>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                name: 'Lalbagh Fort',
+                detail: 'A Mughal-era fort complex in Old Dhaka.',
+                image: 'https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=800&q=80',
+              },
+              {
+                name: 'Ahsan Manzil',
+                detail: 'The historic Pink Palace beside the Buriganga River.',
+                image: 'https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=800&q=80',
+              },
+              {
+                name: 'National Parliament',
+                detail: 'Louis Kahn\'s landmark of modern architecture.',
+                image: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80',
+              },
+              {
+                name: 'Daffodil Smart City',
+                detail: 'The green, connected campus hosting CIDSBA 2027.',
+                image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80',
+              },
+            ].map((place) => (
+              <article key={place.name} className="overflow-hidden rounded-2xl border border-[#e7ddce] bg-[#fffdf8] shadow-sm">
+                <img src={place.image} alt={place.name} className="aspect-[4/3] w-full object-cover" />
+                <div className="p-5">
+                  <h3 className="text-lg font-black text-[#26352f]">{place.name}</h3>
+                  <p className="mt-2 text-sm leading-6 text-[#6e746b]">{place.detail}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="announcement" className="section bg-[#f3e4c9]">
         <div className="container flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <span className="section-label">Conference archive</span>
-            <h2 className="section-heading">Continue from IDAA 2025</h2>
-            <p className="section-copy">Browse previous proceedings and conference records as the CIDSBA community grows.</p>
+            <span className="section-label">Conference materials</span>
+            <h2 className="section-heading">More information will be announced soon</h2>
+            <p className="section-copy">Proceedings, final program details, and additional conference resources will appear here as they are confirmed.</p>
           </div>
-          <Link href="/downloads" className="secondary-button whitespace-nowrap">View Proceedings</Link>
+          <Link href="/downloads" className="secondary-button whitespace-nowrap">Visit Downloads</Link>
         </div>
       </section>
 

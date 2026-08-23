@@ -46,6 +46,39 @@ export default function Registration() {
           </p>
         </div>
 
+        <div className="mx-auto mt-12 max-w-6xl overflow-hidden rounded-[1.75rem] border border-[#e7ddce] bg-[#fffdf8] shadow-[0_16px_40px_rgba(38,53,47,0.08)]">
+          <div className="bg-[#3c5147] px-6 py-5 text-center text-xl font-black uppercase tracking-[0.12em] text-[#fffdf8] md:text-2xl">
+            Registration fees
+          </div>
+          <div className="overflow-x-auto p-4 sm:p-6">
+            <table className="w-full min-w-[620px] border-collapse text-left text-sm">
+              <thead>
+                <tr className="border-b-2 border-[#a85c3b] text-xs uppercase tracking-[0.12em] text-[#8d4f35]">
+                  <th className="px-3 py-4 font-bold">Registration type</th>
+                  <th className="px-3 py-4 font-bold">Non-IEEE members</th>
+                  <th className="px-3 py-4 font-bold">IEEE members</th>
+                </tr>
+              </thead>
+              <tbody className="text-[#5f685f]">
+                {[
+                  ['International Authors', 'USD 250', 'USD 200'],
+                  ['International Student Authors', 'USD 200', 'USD 180'],
+                  ['International Participants', 'USD 250', 'USD 200'],
+                  ['Local Authors', 'BDT 11,000', 'BDT 10,000'],
+                  ['Local Student Authors', 'BDT 9,000', 'BDT 7,500'],
+                  ['Local Participants', 'BDT 7,000', 'BDT 7,000'],
+                ].map(([type, nonMember, member]) => (
+                  <tr key={type} className="border-b border-[#e7ddce] last:border-0">
+                    <th className="px-3 py-4 font-bold text-[#3c5147]">{type}</th>
+                    <td className="px-3 py-4">{nonMember}</td>
+                    <td className="px-3 py-4">{member}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <div className="mt-12 grid gap-6 lg:grid-cols-4">
           {categories.map((category) => (
             <div key={category.title} className="overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_16px_40px_rgba(13,27,61,0.08)]">

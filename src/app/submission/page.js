@@ -65,6 +65,57 @@ export default function Submission() {
             </div>
           </div>
 
+          <div id="camera-ready" className="soft-card p-8 md:p-10">
+            <div className="mb-6 flex items-center gap-3">
+              <div className="feature-icon h-12 w-12 bg-[#e4eee2] text-[#3c5147]">
+                <FaCheckCircle />
+              </div>
+              <h2 className="text-2xl font-black text-[#26352f] md:text-3xl">Camera-ready requirements</h2>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {[
+                "Incorporate reviewer comments into the final manuscript.",
+                "Use the official IEEE conference template and stay within the page limit.",
+                "Submit the final PDF together with the completed copyright form.",
+                "At least one author must register and present the accepted paper.",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 rounded-2xl border border-[#e7ddce] bg-[#f3eee4] p-4">
+                  <FaCheckCircle className="mt-1 text-[#687f68]" />
+                  <span className="leading-7 text-[#5f685f]">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div id="presentation" className="soft-card p-8 md:p-10">
+            <div className="mb-6 flex items-center gap-3">
+              <div className="feature-icon h-12 w-12 bg-[#f3e4c9] text-[#a85c3b]">
+                <FaFileAlt />
+              </div>
+              <h2 className="text-2xl font-black text-[#26352f] md:text-3xl">Presentation guidelines</h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <h3 className="font-bold text-[#3c5147]">Oral presentation</h3>
+                <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-[#5f685f]">
+                  <li>15 minutes for presentation plus 5 minutes for questions.</li>
+                  <li>Use a 16:9 slide format with readable text.</li>
+                  <li>Include motivation, method, results, and conclusion.</li>
+                  <li>Submit the final slide deck before your session.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-bold text-[#3c5147]">Virtual presentation</h3>
+                <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-[#5f685f]">
+                  <li>Use a stable internet connection and test your microphone.</li>
+                  <li>Join the virtual room 15 minutes before the session.</li>
+                  <li>Keep your camera on when presenting, where possible.</li>
+                  <li>Platform details will be shared with registered authors.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <div className="rounded-[2rem] bg-[linear-gradient(135deg,#061a34,#123e72_55%,#0b7ca4)] p-8 text-center text-white shadow-[0_20px_60px_rgba(13,27,61,0.18)] md:p-10">
             <h2 className="text-2xl font-black md:text-3xl">Ready to submit your work?</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-200">
