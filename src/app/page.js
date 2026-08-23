@@ -351,17 +351,17 @@ export default function Home() {
               {
                 name: 'Lalbagh Fort',
                 detail: 'A Mughal-era fort complex in Old Dhaka.',
-                image: 'https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=800&q=80',
+                image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Lalbagh%20Fort.jpg?width=800',
               },
               {
                 name: 'Ahsan Manzil',
                 detail: 'The historic Pink Palace beside the Buriganga River.',
-                image: 'https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=800&q=80',
+                image: 'https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlFQPbKOhodZIdFLjX0laEWsa7kO6hBUHxA8ZNS48WKo-E_O8nriFg-_3s2VBYhvNeiUPbp7e3S1XaXej0--EqNcIr-Z3zGzFLgdUDGWVJMLXw0tGSa6VRDSZQMygoqX-IO-rKy=s680-w680-h510-rw',
               },
               {
                 name: 'National Parliament',
                 detail: 'Louis Kahn\'s landmark of modern architecture.',
-                image: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80',
+                image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Jatiya%20Sangsad%20Bhaban.jpg?width=800',
               },
               {
                 name: 'Daffodil Smart City',
