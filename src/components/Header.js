@@ -19,34 +19,68 @@ export default function Header() {
   const navigation = [
     { name: 'Home', href: '/' },
     {
-      name: 'About',
-      href: '#',
+      name: 'Committee',
+      href: '/committees',
       dropdown: [
-        { name: 'Committees', href: '/committees' },
-        { name: 'Speakers', href: '/speakers' },
-        { name: 'Sponsors', href: '/sponsors' },
+        { name: 'Chief Patron & Patron', href: '/committees#patrons' },
+        { name: 'International Advisory Committee', href: '/committees#international-advisory' },
+        { name: 'National Advisory Committee', href: '/committees#national-advisory' },
+        { name: 'Conference Chairs & Co-Chairs', href: '/committees#chairs' },
+        { name: 'Organizing Committee', href: '/committees#organizing' },
+        { name: 'Technical Program Committee', href: '/committees#tpc' },
+        { name: 'Track Chairs & Co-Chairs', href: '/committees#track-chairs' },
+        { name: 'Others Committee', href: '/committees#others' },
       ],
     },
-    { name: 'Schedule', href: '/schedule' },
-    { name: 'Submission', href: '/submission' },
-    { name: 'Registration', href: '/registration' },
     {
-      name: 'Resources',
-      href: '#',
+      name: 'Messages',
+      href: '/#messages',
       dropdown: [
-        { name: 'Downloads', href: '/downloads' },
-        { name: 'FAQ', href: '/faq' },
-        { name: 'Gallery', href: '/gallery' },
-        { name: 'News', href: '/news' },
+        { name: 'Chief Guest: Opening & Closing', href: '/#messages' },
+        { name: 'Chief Patron & Patrons', href: '/#messages' },
+        { name: 'General, Organizing & TPC Chairs', href: '/#messages' },
       ],
     },
+    {
+      name: 'Speakers',
+      href: '/speakers',
+      dropdown: [
+        { name: 'Keynote Speakers', href: '/speakers#keynote' },
+        { name: 'Invited Speakers', href: '/speakers#invited' },
+      ],
+    },
+    {
+      name: 'Authors',
+      href: '/submission',
+      dropdown: [
+        { name: 'Paper Submission & Guidelines', href: '/submission' },
+        { name: 'Conference Flyer / CFP', href: '/downloads' },
+        { name: 'Tracks', href: '/#tracks' },
+        { name: 'Important Dates', href: '/schedule' },
+        { name: 'Program Schedule', href: '/schedule' },
+        { name: 'Registration Info & Costs', href: '/registration' },
+        { name: 'Camera-Ready & Presentation Guidelines', href: '/submission#camera-ready' },
+        { name: 'Conference Template', href: '/downloads' },
+        { name: 'Accommodation & Transportation', href: '/contact#travel' },
+      ],
+    },
+    {
+      name: 'Events',
+      href: '/#events',
+      dropdown: [
+        { name: 'Workshop', href: '/#events' },
+        { name: 'Add Your Event', href: '/contact#events' },
+      ],
+    },
+    { name: 'Local Attraction', href: '/#local-attraction' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Archive', href: '/#archive' },
   ];
 
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'border-b border-slate-200 bg-white/90 shadow-lg backdrop-blur-xl' : 'bg-white/80 shadow-sm backdrop-blur-xl'
+        scrolled ? 'border-b border-[#e7ddce] bg-[#fffdf8]/95 shadow-lg backdrop-blur-xl' : 'bg-[#fffdf8]/90 shadow-sm backdrop-blur-xl'
       }`}
     >
       <nav className="container">
@@ -55,7 +89,7 @@ export default function Header() {
             <img src="/images/ConferenceLogo.png" alt="CIDSBA 2027 conference logo" className="h-12 w-auto max-w-[240px] object-contain md:h-14" />
           </Link>
 
-          <div className="hidden items-center gap-1 lg:flex">
+          <div className="hidden items-center gap-1 xl:flex">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
@@ -88,14 +122,14 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="hidden items-center gap-3 xl:flex">
             <img src="/images/diu-logo.png" alt="DIU logo" className="h-12 w-12 rounded-full border border-slate-200 bg-white p-1 shadow-sm" />
-            <Link href="/registration" className="gold-button">
-              Register Now
+            <Link href="/submission" className="gold-button">
+              Submit Paper
             </Link>
           </div>
 
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="rounded-full border border-slate-200 p-2 text-slate-700 transition hover:bg-slate-100"
@@ -106,7 +140,7 @@ export default function Header() {
         </div>
 
         {isOpen && (
-          <div className="border-t border-slate-200 pb-4 pt-3 lg:hidden">
+          <div className="border-t border-[#e7ddce] pb-4 pt-3 xl:hidden">
             {navigation.map((item) => (
               <div key={item.name}>
                 {item.dropdown ? (

@@ -3,26 +3,26 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaLinkedin, FaFacebookF, FaTwit
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-200">
+    <footer className="bg-[#26352f] text-[#d9e1d8]">
       <div className="container py-14">
-        <div className="rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6 md:p-8">
+        <div className="rounded-[2rem] border border-[#52685b] bg-[#3c5147] p-6 md:p-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">Stay connected</div>
-              <h3 className="mt-2 text-2xl font-black text-white">Join the conversation</h3>
+              <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e6c78f]">Stay connected</div>
+              <h3 className="mt-2 text-2xl font-black text-[#fffdf8]">Join the conversation</h3>
             </div>
             <div className="flex flex-wrap items-center gap-3">
               <Link href="/registration" className="gold-button">Register now</Link>
-              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-800 text-slate-200 transition hover:border-cyan-400 hover:text-cyan-200">
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#52685b] bg-[#26352f] text-[#d9e1d8] transition hover:border-[#e6c78f] hover:text-[#e6c78f]">
                 <FaLinkedin size={16} />
               </a>
-              <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-800 text-slate-200 transition hover:border-cyan-400 hover:text-cyan-200">
+              <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#52685b] bg-[#26352f] text-[#d9e1d8] transition hover:border-[#e6c78f] hover:text-[#e6c78f]">
                 <FaFacebookF size={16} />
               </a>
-              <a href="https://x.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-800 text-slate-200 transition hover:border-cyan-400 hover:text-cyan-200">
+              <a href="https://x.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#52685b] bg-[#26352f] text-[#d9e1d8] transition hover:border-[#e6c78f] hover:text-[#e6c78f]">
                 <FaTwitter size={16} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-800 text-slate-200 transition hover:border-cyan-400 hover:text-cyan-200">
+              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#52685b] bg-[#26352f] text-[#d9e1d8] transition hover:border-[#e6c78f] hover:text-[#e6c78f]">
                 <FaYoutube size={16} />
               </a>
             </div>
