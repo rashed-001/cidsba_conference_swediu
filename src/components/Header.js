@@ -59,8 +59,8 @@ export default function Header() {
         { name: 'Important Dates', href: '/schedule' },
         { name: 'Program Schedule', href: '/schedule' },
         { name: 'Registration Info & Costs', href: '/registration' },
-        { name: 'Camera-Ready Guidelines', href: '/submission#camera-ready' },
-        { name: 'Presentation Guidelines', href: '/submission#presentation' },
+        { name: 'Camera-Ready Guidelines', href: '/camera-ready' },
+        { name: 'Presentation Guidelines', href: '/presentation-guidelines' },
         { name: 'Conference Template', href: '/downloads' },
         { name: 'Accommodation & Transportation', href: '/contact#travel' },
       ],
@@ -73,6 +73,7 @@ export default function Header() {
         { name: 'Add Your Event', href: '/contact#events' },
       ],
     },
+    { name: 'Awards', href: '/awards' },
     { name: 'Local Attraction', href: '/#local-attraction' },
     { name: 'Contact', href: '/contact' },
   ];

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaFileAlt, FaCheckCircle, FaCalendarAlt, FaDownload, FaArrowRight } from 'react-icons/fa';
 
 export default function Submission() {
@@ -65,54 +66,35 @@ export default function Submission() {
             </div>
           </div>
 
-          <div id="camera-ready" className="soft-card p-8 md:p-10">
-            <div className="mb-6 flex items-center gap-3">
-              <div className="feature-icon h-12 w-12 bg-[#e4eee2] text-[#3c5147]">
-                <FaCheckCircle />
-              </div>
-              <h2 className="text-2xl font-black text-[#26352f] md:text-3xl">Camera-ready requirements</h2>
-            </div>
-            <div className="grid gap-4 md:grid-cols-2">
-              {[
-                "Incorporate reviewer comments into the final manuscript.",
-                "Use the official IEEE conference template and stay within the page limit.",
-                "Submit the final PDF together with the completed copyright form.",
-                "At least one author must register and present the accepted paper.",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 rounded-2xl border border-[#e7ddce] bg-[#f3eee4] p-4">
-                  <FaCheckCircle className="mt-1 text-[#687f68]" />
-                  <span className="leading-7 text-[#5f685f]">{item}</span>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div id="camera-ready" className="soft-card flex flex-col p-8 md:p-10">
+              <div className="mb-6 flex items-center gap-3">
+                <div className="feature-icon h-12 w-12 bg-[#e4eee2] text-[#3c5147]">
+                  <FaCheckCircle />
                 </div>
-              ))}
+                <h2 className="text-2xl font-black text-[#26352f]">Camera-ready submission</h2>
+              </div>
+              <p className="flex-1 leading-7 text-[#5f685f]">
+                Full requirements and steps for preparing and submitting your camera-ready manuscript and copyright form.
+              </p>
+              <Link href="/camera-ready" className="secondary-button mt-6 self-start">
+                View camera-ready guidelines <FaArrowRight className="ml-2" />
+              </Link>
             </div>
-          </div>
 
-          <div id="presentation" className="soft-card p-8 md:p-10">
-            <div className="mb-6 flex items-center gap-3">
-              <div className="feature-icon h-12 w-12 bg-[#f3e4c9] text-[#a85c3b]">
-                <FaFileAlt />
+            <div id="presentation" className="soft-card flex flex-col p-8 md:p-10">
+              <div className="mb-6 flex items-center gap-3">
+                <div className="feature-icon h-12 w-12 bg-[#f3e4c9] text-[#a85c3b]">
+                  <FaFileAlt />
+                </div>
+                <h2 className="text-2xl font-black text-[#26352f]">Presentation guidelines</h2>
               </div>
-              <h2 className="text-2xl font-black text-[#26352f] md:text-3xl">Presentation guidelines</h2>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2">
-              <div>
-                <h3 className="font-bold text-[#3c5147]">Oral presentation</h3>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-[#5f685f]">
-                  <li>15 minutes for presentation plus 5 minutes for questions.</li>
-                  <li>Use a 16:9 slide format with readable text.</li>
-                  <li>Include motivation, method, results, and conclusion.</li>
-                  <li>Submit the final slide deck before your session.</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-bold text-[#3c5147]">Virtual presentation</h3>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-[#5f685f]">
-                  <li>Use a stable internet connection and test your microphone.</li>
-                  <li>Join the virtual room 15 minutes before the session.</li>
-                  <li>Keep your camera on when presenting, where possible.</li>
-                  <li>Platform details will be shared with registered authors.</li>
-                </ul>
-              </div>
+              <p className="flex-1 leading-7 text-[#5f685f]">
+                Guidance for oral, virtual, and poster presentations, including timing, format, and templates.
+              </p>
+              <Link href="/presentation-guidelines" className="secondary-button mt-6 self-start">
+                View presentation guidelines <FaArrowRight className="ml-2" />
+              </Link>
             </div>
           </div>
 
